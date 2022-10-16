@@ -1,0 +1,23 @@
+<script>
+    // single level inheritance
+    class a{
+        myfunction1(){
+            console.log("class a"); 
+        }
+    }
+    class b extends a{    // inheritance using extends keyword
+        myfunction2(){
+            console.log("class b");
+        }
+        myfunction1(){
+            super.myfunction1();  // super keyword for assesing function 1 from class a
+            console.log("class b function a");   // method overrriding concept 
+        }
+    }
+
+    var record= new b;
+    console.log(record);
+    record.myfunction1();
+    record.myfunction2();
+    
+</script>
